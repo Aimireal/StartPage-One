@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <!--
-    Homepage by Emily !66666666Ok
-    pls (dont) steal
+    Homepage by ZombieHandout :)))
 -->
 <html>
     <head>
@@ -24,7 +23,7 @@
                     <div id="weather2"></div>
                 </div>
                 <div class="top" id="title">
-                    <p id ="titletext" class="bracket" onclick="loadWeather(); toggleVisibility('title', 'weatherContainer');" style="cursor: pointer;">こんにちは!</p>
+                    <p id ="titletext" class="bracket" onclick="loadWeather(); toggleVisibility('title', 'weatherContainer');" style="cursor: pointer;">Start</p>
                 </div>
             </div>
             <div class="searchContainer">
@@ -46,42 +45,49 @@
                     </ul>
                 </div>
 			</div>
-            <div class="d1x1">
-                <h1 class="bracket">News</h1>                
-                <a href="http://www.tweakers.net/">Tweakers</a> <br />
-                <a href="http://nos.nl/">NOS.nl</a> <br />
-                <a href="http://www.nu.nl/">nu.nl</a> <br />
+			
+			<div class="d1x1">
+                <h1 class="bracket">Everday</h1>                
+                <a href="https://www.google.co.uk/">Google</a> <br />
+				<a href="https://www.youtube.com/feed/subscriptions/">YouTube</a> <br />
+				<a href="https://www.reddit.com/">reddit</a> <br />
             </div>
-            
-            <div class="d1x1">
-                <h1 class="bracket">Boards</h1>
-                <a href="https://8ch.net/animus/">/animus/ - Circlejerk</a> <br />
-                <a href="https://boards.4chan.org/g/">/g/ - Technology</a> <br />
-                <a href="https://8ch.net/animus/">/tech/ - Technology</a> <br />
-                <a href="https://www.reddit.com/">reddit</a> <br />
-            </div>
-            
-            <div class="d1x1">
+			
+			<div class="d1x1">
+                <h1 class="bracket">Social</h1>
+                <a href="https://www.facebook.com/">Facebook</a> <br />
+                <a href="https://twitter.com/">Twitter</a> <br />
+                <a href="https://www.tumblr.com/dashboard">Tumblr</a> <br />
+				<a href="https://www.twitch.tv/">Twitch</a> <br />
+			</div>
+			
+			<div class="d1x1">
                 <h1 class="bracket">Media</h1>
-                <a href="https://www.youtube.com/feed/subscriptions/">YouTube</a> <br />
                 <a href="http://www.soundcloud.com/">SoundCloud</a> <br />
-                <a href="http://www.animebytes.tv/">AnimeBytes</a> <br />
+                <a href="http://kissanime.ru/">Kissanime</a> <br />
                 <a href="http://myanimelist.net/">MAL</a> <br />                
             </div>
             
             <div class="d1x1">
-                <h1 class="bracket">Fontys</h1>
-                <a href="https://portal.fhict.nl/">FHICT Portal</a> <br />
-                <a href="https://git.fhict.nl/">FHICT Git</a> <br/>
-                <a href="https://fhict.instructure.com/">Canvas</a> <br />
-                <a href="https://mail.fontys.nl/owa/">Webmail</a> <br />        
+                <h1 class="bracket">Boards</h1>
+				<a href="http://www.4chan.org/">/4chan/ Homepage</a> <br />
+                <a href="https://boards.4chan.org/a/">/a/ - Animus and Mangos</a> <br />
+                <a href="https://boards.4chan.org/g/">/g/ - Technology</a> <br />
+                <a href="https://8ch.net/animus/">/tech/ - Technology</a> <br />
             </div>
         
             <div class="d1x1">
-                <h1 class="bracket">Web</h1>
-                <a href="http://www.xkcd.com/">xkcd</a> <br />
-                <a href="http://what-if.xkcd.com/">What If?</a> <br />
-                <a href="http://www.prequeladventure.com/">PREQUEL</a> <br />
+                <h1 class="bracket">Buying</h1>
+                <a href="https://www.amazon.co.uk/">Amazon</a> <br />
+                <a href="https://www.ebay.co.uk/">eBay</a> <br />
+                <a href="https://www.superbuy.com/cn/page/">SuperBuy</a> <br />
+            </div>
+			
+			<div class="d1x1">
+                <h1 class="bracket">Dev</h1>
+                <a href="https://github.com/">Github</a> <br />
+                <a href="https://fhict.instructure.com/">Canvas</a> <br />
+                <a href="https://stackoverflow.com/">Stack Overflow</a> <br />        
             </div>
             
             <div class="d1x1">
@@ -97,13 +103,6 @@
                 <a href="http://imgur.com">Imgur</a> <br />
             </div>
             
-            <div class="d1x1">
-                <h1 class="bracket">Misc</h1>
-                <a href="http://www.9292.nl/">9292</a> <br />
-                <a href="https://github.com/E66666666/homepage">GitHub</a> <br />
-                <a href="http://translate.google.com/">Translate</a> <br />
-
-            </div>
             
             <div class="d2x1" id="todo">
                 <h1 class="bracket" style="cursor: pointer;" onclick="saveTodo();">Todo</h1>
@@ -111,16 +110,6 @@
                         <textarea id="todobox" name="comments">
                         </textarea>
                     </form>
-            </div>
-            
-            <div class="d2x1">
-                <h1> <a href="http://nu.nl/" class="bracket">NU.nl</a></h1>
-                <div class="d2x1Child" id="nu"></div> 
-            </div>
-            
-            <div class="d2x1">
-                <h1><a href="http://nos.nl/" class="bracket">NOS Nieuws</a></h1>
-                <div class="d2x1Child" id="nos"></div>
             </div>
             
             <div class="d2x1">
@@ -145,11 +134,7 @@
             </div>
             
         </div>
-        
-        <div id="bottom-margin"></div>
-        
-        
-        
+            
         <!--
             Load some js
         -->
