@@ -1,0 +1,209 @@
+﻿<!DOCTYPE HTML>
+<!--
+    Homepage by Emily !66666666Ok
+    pls (dont) steal
+-->
+<html>
+    <head>
+        <title>Homepage</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="icon" sizes="256x256" href="img/pomf.png">
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <div class="bg" id="bg"></div>
+        <div id="toggleBlur">
+            <p style="cursor: pointer;" onclick="toggleBlur();">Toggle blur</p>
+        </div>
+        <div class="center">
+            <div id="header">
+                <div class="top" id="weatherContainer" onclick="toggleVisibility('weatherContainer', 'title');" style="cursor: pointer;">
+                    <div id="weather"></div>
+                    <div id="weather2"></div>
+                </div>
+                <div class="top" id="title">
+                    <p id ="titletext" class="bracket" onclick="loadWeather(); toggleVisibility('title', 'weatherContainer');" style="cursor: pointer;">こんにちは!</p>
+                </div>
+            </div>
+            <div class="searchContainer">
+                <form class="searchForm search_0 searchView" method="get" action="https://google.com/search">
+                    <input class="searchBar search_0_i search_google" type="text" name="q" placeholder="Google" autofocus="autofocus" search_/>
+                </form>
+                <form class="searchForm search_1" method="get" action="https://youtube.com/results">
+                    <input class="searchBar search_1_i search_youtube" type="text" name="search_query" placeholder="YouTube" search_/>
+                </form>
+                <form class="searchForm search_2" method="get" action="https://en.wikipedia.org/w/index.php">
+                    <input class="searchBar search_2_i search_wikipedia" type="text" name="search" placeholder="Wikipedia" search_/>
+                </form>
+
+                <div class="dotstyle dotstyle-fillup">
+                    <ul>
+                        <li id="dot_0" onclick="selectSearch(0);" class="current" ><a href="#">Google</a></li>
+                        <li id="dot_1" onclick="selectSearch(1);"><a href="#">YouTube</a></li>
+                        <li id="dot_2" onclick="selectSearch(2);"><a href="#">Wikipedia</a></li>
+                    </ul>
+                </div>
+			</div>
+            <div class="d1x1">
+                <h1 class="bracket">News</h1>                
+                <a href="http://www.tweakers.net/">Tweakers</a> <br />
+                <a href="http://nos.nl/">NOS.nl</a> <br />
+                <a href="http://www.nu.nl/">nu.nl</a> <br />
+            </div>
+            
+            <div class="d1x1">
+                <h1 class="bracket">Boards</h1>
+                <a href="https://8ch.net/animus/">/animus/ - Circlejerk</a> <br />
+                <a href="https://boards.4chan.org/g/">/g/ - Technology</a> <br />
+                <a href="https://8ch.net/animus/">/tech/ - Technology</a> <br />
+                <a href="https://www.reddit.com/">reddit</a> <br />
+            </div>
+            
+            <div class="d1x1">
+                <h1 class="bracket">Media</h1>
+                <a href="https://www.youtube.com/feed/subscriptions/">YouTube</a> <br />
+                <a href="http://www.soundcloud.com/">SoundCloud</a> <br />
+                <a href="http://www.animebytes.tv/">AnimeBytes</a> <br />
+                <a href="http://myanimelist.net/">MAL</a> <br />                
+            </div>
+            
+            <div class="d1x1">
+                <h1 class="bracket">Fontys</h1>
+                <a href="https://portal.fhict.nl/">FHICT Portal</a> <br />
+                <a href="https://git.fhict.nl/">FHICT Git</a> <br/>
+                <a href="https://fhict.instructure.com/">Canvas</a> <br />
+                <a href="https://mail.fontys.nl/owa/">Webmail</a> <br />        
+            </div>
+        
+            <div class="d1x1">
+                <h1 class="bracket">Web</h1>
+                <a href="http://www.xkcd.com/">xkcd</a> <br />
+                <a href="http://what-if.xkcd.com/">What If?</a> <br />
+                <a href="http://www.prequeladventure.com/">PREQUEL</a> <br />
+            </div>
+            
+            <div class="d1x1">
+                <h1 class="bracket">Mail</h1>
+                <a href="http://mail.google.com">Gmail</a> <br />
+                <a href="http://outlook.com">Outlook</a> <br />        
+            </div>
+                        
+            <div class="d1x1">
+                <h1 class="bracket">Hosting</h1>
+                <a href="https://mixtape.moe/">Mixtape.moe</a> <br />
+                <a href="https://docs.google.com/spreadsheets/d/1kh1TZdtyX7UlRd55OBxf7DB-JGj2rsfWckI0FPQRYhE/edit#gid=0">Pomf.se clones</a> <br />
+                <a href="http://imgur.com">Imgur</a> <br />
+            </div>
+            
+            <div class="d1x1">
+                <h1 class="bracket">Misc</h1>
+                <a href="http://www.9292.nl/">9292</a> <br />
+                <a href="https://github.com/E66666666/homepage">GitHub</a> <br />
+                <a href="http://translate.google.com/">Translate</a> <br />
+
+            </div>
+            
+            <div class="d2x1" id="todo">
+                <h1 class="bracket" style="cursor: pointer;" onclick="saveTodo();">Todo</h1>
+                    <form method="post" action="">
+                        <textarea id="todobox" name="comments">
+                        </textarea>
+                    </form>
+            </div>
+            
+            <div class="d2x1">
+                <h1> <a href="http://nu.nl/" class="bracket">NU.nl</a></h1>
+                <div class="d2x1Child" id="nu"></div> 
+            </div>
+            
+            <div class="d2x1">
+                <h1><a href="http://nos.nl/" class="bracket">NOS Nieuws</a></h1>
+                <div class="d2x1Child" id="nos"></div>
+            </div>
+            
+            <div class="d2x1">
+                <h1><a href="http://www.tweakers.net/" class="bracket">Tweakers</a></h1>
+                <div class="d2x1Child" id="tweakers"></div>
+            </div>
+            
+            <div class="d4x2" id="xkcdContainer">
+                <h1><a href="http://www.xkcd.com/" class="bracket">xkcd</a></h1>
+                <div id="xkcd"></div>
+                <div id="xkcdDate"></div>
+            </div>
+            <div class="d4x2" id="whatifContainer">
+                <h1><a href="http://what-if.xkcd.com/" class="bracket">What If?</a></h1>
+                <div id="whatif"></div>
+                <div id="whatifDate"></div>
+            </div>
+            <div class="d4x2" id="prequelContainer">
+                <h1><a href="http://www.prequeladventure.com/" class="bracket">PREQUEL</a></h1>
+                <div id="prequel"></div>
+                <div id="prequelDate"></div>
+            </div>
+            
+        </div>
+        
+        <div id="bottom-margin"></div>
+        
+        
+        
+        <!--
+            Load some js
+        -->
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/moment.min.js"></script>
+        <script src="js/FeedEk.js"></script>
+        <script src="js/jquery.simpleWeather.min.js"></script>
+        
+        <script src="js/scripts.js"></script>
+        <script type="text/javascript">
+            // Randomize background
+            var date = new Date();
+            var hour = date.getHours();
+            var bgpath = "img/";
+            if ( hour > 6 && hour < 18 ) {
+                var bgd = [ 'bgd1', 'bgd2', 'bgd3', 'bgd4', 'bgd5', 'bgd6', 'bgd7', 'bgd8', 'bgd9', 'bgd10', 'bgd11', 'bgd12', 'bgd13' ];
+                var bgd = bgd[Math.floor(Math.random() * bgd.length)];
+                document.querySelector('.bg').classList.add(bgd);
+                bgpath += bgd;
+            }
+            else {
+                var bgn = [ 'bgn1', 'bgn2', 'bgn3', 'bgn4', 'bgn5', 'bgn6', 'bgn7', 'bgn8', 'bgn9', 'bgn10', 'bgn11', 'bgn12', 'bgn13', 'bgn14', 'bgn15' ];
+                var bgn = bgn[Math.floor(Math.random() * bgn.length)];
+                document.querySelector('.bg').classList.add(bgn);
+                bgpath += bgn;
+            }
+            bgpath += ".jpg";
+            
+            var image = document.createElement("img");
+            image.id = "bgimg";
+            image.src = bgpath;
+            
+            // Chrome color
+            var rgb;
+            image.onload = function() {
+                        rgb = getAverageRGB(image);
+                        var meta = document.createElement('meta');
+                        meta.name = "theme-color";
+                        meta.content = 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')';
+                        document.getElementsByTagName('head')[0].appendChild(meta);
+            }
+            
+            // Header title
+			if ( hour >= 3 && hour < 10 ) {
+				document.getElementById("titletext").innerHTML = "おはよう!";
+			}
+			if ( hour >= 10 && hour < 18 ) {
+				document.getElementById("titletext").innerHTML = "こんにちは!";
+			}
+			if ( hour >= 18 || hour < 3 ) {
+				document.getElementById("titletext").innerHTML = "こんばんは!";
+			}
+        </script>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    </body>
+</html>
