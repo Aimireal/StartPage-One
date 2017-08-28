@@ -120,7 +120,7 @@ h1 {
     left: 0;
     top: 0;
 	transition: opacity 0.8s;
-	opacity: 0.1;
+	opacity: 0.2;
 }
 
 #toggleBlur:hover{
