@@ -1,4 +1,52 @@
-<div class="d1x1">
+<!DOCTYPE HTML>
+<!--
+  Startpage-One
+-->
+<html>
+    <head>
+        <title>Homepage</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="icon" sizes="256x256" href="img/pomf.png">
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <div class="bg" id="bg"></div>
+        <div id="toggleBlur">
+            <p style="cursor: pointer;" onclick="toggleBlur();">Toggle blur</p>
+        </div>
+        <div class="center">
+            <div id="header">
+                <div class="top" id="weatherContainer" onclick="toggleVisibility('weatherContainer', 'title');" style="cursor: pointer;">
+                    <div id="weather"></div>
+                    <div id="weather2"></div>
+                </div>
+                <div class="top" id="title">
+                    <p id ="titletext" class="bracket" onclick="loadWeather(); toggleVisibility('title', 'weatherContainer');" style="cursor: pointer;">Homepage</p>
+                </div>
+            </div>
+            <div class="searchContainer">
+                <form class="searchForm search_0 searchView" method="get" action="https://google.com/search">
+                    <input class="searchBar search_0_i search_google" type="text" name="q" placeholder="Google" autofocus="autofocus" search_/>
+                </form>
+                <form class="searchForm search_1" method="get" action="https://youtube.com/results">
+                    <input class="searchBar search_1_i search_youtube" type="text" name="search_query" placeholder="YouTube" search_/>
+                </form>
+                <form class="searchForm search_2" method="get" action="https://en.wikipedia.org/w/index.php">
+                    <input class="searchBar search_2_i search_wikipedia" type="text" name="search" placeholder="Wikipedia" search_/>
+                </form>
+
+                <div class="dotstyle dotstyle-fillup">
+                    <ul>
+                        <li id="dot_0" onclick="selectSearch(0);" class="current" ><a href="#">Google</a></li>
+                        <li id="dot_1" onclick="selectSearch(1);"><a href="#">YouTube</a></li>
+                        <li id="dot_2" onclick="selectSearch(2);"><a href="#">Wikipedia</a></li>
+                    </ul>
+                </div>
+			</div>
+		
+ 			<div class="d1x1">
                 <h1 class="bracket">Everyday</h1>                
                 <a href="https://www.google.co.uk/">Google</a> <br />
 				<a href="http://mail.google.com">Gmail</a> <br />
@@ -60,5 +108,62 @@
 				<a href="http://192.168.0.45/">Octopi Server</a> <br />
 			</div> 
         </div>
-        
         <div id="bottom-margin"></div>
+        
+        <!--
+            Load some js
+        -->
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/moment.min.js"></script>
+        <script src="js/FeedEk.js"></script>
+        <script src="js/jquery.simpleWeather.min.js"></script>
+        
+        <script src="js/scripts.js"></script>
+        <script type="text/javascript">
+            // Randomize background
+            var date = new Date();
+            var hour = date.getHours();
+            var bgpath = "img/";
+            if ( hour > 6 && hour < 18 ) {
+                var bgd = [ 'bgd1', 'bgd2', 'bgd3', 'bgd4', 'bgd5', 'bgd6', 'bgd7', 'bgd8', 'bgd9', 'bgd10', 'bgd11', 'bgd12', 'bgd13' ];
+                var bgd = bgd[Math.floor(Math.random() * bgd.length)];
+                document.querySelector('.bg').classList.add(bgd);
+                bgpath += bgd;
+            }
+            else {
+                var bgn = [ 'bgn1', 'bgn2', 'bgn3', 'bgn4', 'bgn5', 'bgn6', 'bgn7', 'bgn8', 'bgn9', 'bgn10', 'bgn11', 'bgn12', 'bgn13', 'bgn14', 'bgn15' ];
+                var bgn = bgn[Math.floor(Math.random() * bgn.length)];
+                document.querySelector('.bg').classList.add(bgn);
+                bgpath += bgn;
+            }
+            bgpath += ".jpg";
+            
+            var image = document.createElement("img");
+            image.id = "bgimg";
+            image.src = bgpath;
+            
+            // Chrome color
+            var rgb;
+            image.onload = function() {
+                        rgb = getAverageRGB(image);
+                        var meta = document.createElement('meta');
+                        meta.name = "theme-color";
+                        meta.content = 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')';
+                        document.getElementsByTagName('head')[0].appendChild(meta);
+            }
+            
+            // Header title
+			if ( hour >= 3 && hour < 10 ) {
+				document.getElementById("titletext").innerHTML = "Homepage";
+			}
+			if ( hour >= 10 && hour < 18 ) {
+				document.getElementById("titletext").innerHTML = "Homepage";
+			}
+			if ( hour >= 18 || hour < 3 ) {
+				document.getElementById("titletext").innerHTML = "Homepage";
+			}
+        </script>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    </body>
+</html>
