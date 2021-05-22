@@ -131,13 +131,13 @@
             var hour = date.getHours();
             var bgpath = "img/";
             if ( hour > 6 && hour < 18 ) {
-                var bgd = [ 'bgd1', 'bgd2', 'bgd3', 'bgd4', 'bgd5', 'bgd6', 'bgd7', 'bgd8', 'bgd9', 'bgd10', 'bgd11', 'bgd12', 'bgd13' ];
+                var bgd = [ 'bgd1', 'bgd2', 'bgd3', 'bgd4', 'bgd5', 'bgd6', 'bgd7', 'bgd8', 'bgd9', 'bgd10' ];
                 var bgd = bgd[Math.floor(Math.random() * bgd.length)];
                 document.querySelector('.bg').classList.add(bgd);
                 bgpath += bgd;
             }
             else {
-                var bgn = [ 'bgn1', 'bgn2', 'bgn3', 'bgn4', 'bgn5', 'bgn6', 'bgn7', 'bgn8', 'bgn9', 'bgn10', 'bgn11', 'bgn12', 'bgn13', 'bgn14', 'bgn15' ];
+                var bgn = [ 'bgn1', 'bgn2', 'bgn3', 'bgn4', 'bgn5', 'bgn6', 'bgn7', 'bgn8', 'bgn9', 'bgn10' ];
                 var bgn = bgn[Math.floor(Math.random() * bgn.length)];
                 document.querySelector('.bg').classList.add(bgn);
                 bgpath += bgn;
